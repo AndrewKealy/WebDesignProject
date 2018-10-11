@@ -1,0 +1,84 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+
+<html lang="en"> <!-- HTML5 opening HTML tag with language. The HTML tag can also be used on it's own -->
+
+	<head>
+		
+		<meta charset="UTF-8"> <!-- HTML5 charset -->
+		<link rel="stylesheet" type="text.css" href="styles.css"/>
+		<title>HTML5 Form</title>
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+			
+			<table>
+				<form action="mailto: x18159761@student.ncirl.ie" method="post" enctype="text/plain">
+					<tr>
+						<td>
+							<label>Please enter your first name: </label>
+						</td>
+						<td>
+						<input type="text" name="fname" placeholder="please enter first name here" size="50" maxlength="6"/>
+						</td>
+
+					</tr>	
+					<tr>
+						<td>
+							<label>Please enter your surname: </label>
+						</td>
+						<td>
+							<input type="text" name="sname" placeholder="please enter surname here" size="50" maxlength="5"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Please enter your first name: </label>
+						</td>
+						<td>
+							<input type="text" name="email" placeholder="please enter email address here" size="50" maxlength="32"/>
+						</td>
+			</table>
+			<br />
+				<label>What is your favourite food? </label><br />
+				<input type="radio" name="ffood" value="pizza"/> Pizza<br/ >
+				<input type="radio" name="ffood" value="burgers"/> Burgers<br/ >
+				<input type="radio" name="ffood" value="chinese"/> Chinese<br/ >
+				<input type="radio" name="ffood" value="sushi"/> Sushi<br/ >
+						
+				<br />
+			<label>What is your favourite subject? </label><br />
+				<input type="checkbox" name="subject1" value="Web Design"/> Web Design<br/ >
+				<input type="checkbox" name="subject2" value="Software Design"/> Software Design<br/ >
+				<input type="checkbox" name="subject3" value="CAOSN"/> Computer Architecture<br/ >
+				<input type="checkbox" name="subject4" value="cridge"/> Career Bridge<br/ >
+				<br />	
+				<label>What is your favourite country?</label>
+				<select  name="country">
+					<option value="Spain"> Spain </option>
+					<option value="Korea"> Korea </option>
+					<option value="Maldives"> Maldives </option>
+					<option value="France"> France </option>
+				</select>
+				<br />
+				<br />
+				<label>Comments:</label>
+				<br />
+				<textarea rows="5" cols="15" placeholder="please enter any comments here"></textarea><br />	
+			<input type="submit" value="Send" /> 	
+			<input type="reset" value="Reset"/> 
+		</form>
+			<p id="firstPar">This is a paragraph of text. It will not be bold</p>
+			<p class="boldText">This is also a paragraph of text. It will be made bold by applying a CSS class to this paragraph</p>			
+			<p class="boldText">This par will also have the bold class applied</p>
+			
+			
+			
+			
+	</body>
+
+</html>
