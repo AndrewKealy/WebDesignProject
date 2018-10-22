@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+
+  <!-- A script that sets the src of the audio player to the correct key and updartes the displayed notes depending on the value selected-->
+
+  <script>
+  function keySelectFunction(key){
+    var mp3Audio=document.getElementById('myMp3Source');
+    var oggAudio=document.getElementById('myOggSource');
+    mp3Audio.src='MusicSamples/Ionian/'+key+'_Ionian.mp3';
+    oggAudio.src='MusicSamples/Ionian/'+key+'_Ionian.ogg';
+    var audioPlayer=document.getElementById('myAudioPlayer');
+    var notesInScaleA="";
+    var notesInScaleB="";
+      switch(key){
+        case "C":
+          notesInScaleA="C D E F G A B C";
+          notesInScaleB="";
+          break;
+          case "C♯D♭":
+          notesInScaleA="C♯ D♯ E♯ F♯ G♯ A♯ B♯ C♯";
+          notesInScaleB="D♭ E♭ F G♭ A♭ B♭ C D♭";
+          break;
+          case "D":
+          notesInScaleA="D E F♯ G A B C♯ D";
+          notesInScaleB="";
+          break;
+          case "D♯E♭":
+          notesInScaleA="D♯ E♯ F𝄪 G♯ A♯ B♯ C𝄪 D♯";
+          notesInScaleB="E♭ F  G  A♭ B♭ C  D E♭";
+          break;
+          case "E":
+          notesInScaleA="E F♯ G♯ A B C♯ D♯ E";
+          notesInScaleB="";
+          break;
+          case "F":
+          notesInScaleA="F G A B♭ C D E F";
+          notesInScaleB="";
+          break;
+          case "F♯G♭":
+          notesInScaleA="F♯ G♯ A♯ B  C♯ D♯ E♯ F♯";
+          notesInScaleB="G♭ A♭ B♭ C♭ D♭ E♭ F  G♭";
+          break;
+          case "G":
+          notesInScaleA="G A B C D E F♯ G";
+          notesInScaleB="";
+          break;
+          case "G♯A♭":
+          notesInScaleA="G♯ A♯ B♯ C♯ D♯ E♯ F𝄪 G♯";
+          notesInScaleB="A♭ B♭ C  D♭ E♭ F  G  A♭";
+          break;
+          case "A":
+          notesInScaleA="A B C♯ D E F♯ G♯ A";
+          notesInScaleB="";
+          break;
+          case "A♯B♭":
+          notesInScaleA="A♯ B♯ C𝄪 D♯ E♯ F𝄪 G𝄪 A♯";
+          notesInScaleB="B♭ C  D  E♭ F  G A  B♭";
+          break;
+          case "B":
+          notesInScaleA="B C♯ D♯ E F♯ G♯ A♯ B";
+          notesInScaleB="";
+          break;
+        default: "";
+        break;
+
+      }
+      document.getElementById("ionianNotesA").innerHTML = notesInScaleA;
+      document.getElementById("ionianNotesB").innerHTML = notesInScaleB;
+    audioPlayer.load();
+  }
+  </script>
+
+  <title>Modal scales</title>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="#">Ionian</a>
+    <a href="dorian.html">Dorian</a>
+    <a href="#">Phrygian</a>
+    <a href="#">Lydian</a>
+    <a href="#">Mixolydian</a>
+    <a href="#">Aeolian</a>
+    <a href="#">Locrian</a>
+    <a class="rightAlign" href="#">Contact us</a>
+
+  </div>
+  <h1 class="banner">Ionian</h1>
+  <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
+  </p>
+</p>
+<div class="selector">
+
+    <select id="keySelect" onchange="keySelectFunction(this.value)">
+    <option value="" disabled selected>Please select a key</option>
+    <option value="C">C</option>
+    <option value="C♯D♭">C♯/D♭</option>
+    <option value="D">D</option>
+    <option value="D♯E♭">D♯/E♭</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="F♯G♭">F♯/G♭</option>
+    <option value="G">G</option>
+    <option value="G♯A♭">G♯/A♭</option>
+    <option value="A">A</option>
+    <option value="A♯B♭">A♯/B♭</option>
+    <option value="B">B</option>
+  </select>
+
+
+  <audio id="myAudioPlayer" controls>
+    <source id="myMp3Source" src="" type="audio/mpeg">
+    <source id="myOggSource" src="" type="audio/ogg">
+      Your browswer does not support the audio element.
+
+  </audio>
+</div>
+<div class="notes">
+  <p id="ionianNotesA">
+  </p>
+  <p id="ionianNotesB">
+  </p>
+</div>
+</body>
+</html>
