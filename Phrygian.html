@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+
+  <!-- A script that sets the src of the audio player to the correct key and updartes the displayed notes depending on the value selected-->
+
+  <script>
+  function keySelectFunction(key){
+    var mp3Audio=document.getElementById('myMp3Source');
+    var oggAudio=document.getElementById('myOggSource');
+    mp3Audio.src='MusicSamples/Phrygian/'+key+'_Phrygian.mp3';
+    oggAudio.src='MusicSamples/Phrygian/'+key+'_Phyrgian.ogg';
+    var audioPlayer=document.getElementById('myAudioPlayer');
+    var notesInScaleA="";
+    var notesInScaleB="";
+      switch(key){
+        case "C":
+          notesInScaleA='<span class="rootNote">C,</span> Db, Eb, F, G, Ab, Bb, C';
+          notesInScaleB="";
+          break;
+          case "C♯D♭":
+          notesInScaleA='<span class="rootNote">C#,</span> D, E, F#, G#, A, B, C#';
+          notesInScaleB='<span class="rootNote">D♭,</span> E♭♭, F♭, G♭, A♭, B♭♭, C♭, D♭';
+          break;
+          case "D":
+          notesInScaleA='<span class="rootNote">D,</span> Eb, F, G, A, Bb, C, D';
+          notesInScaleB="";
+          break;
+          case "D♯E♭":
+          notesInScaleA='<span class="rootNote">D♯,</span> E, F#, G#, A#, B, C#, D#';
+          notesInScaleB='<span class="rootNote">E♭,</span> F♭, G♭, A♭, B♭, C♭, D♭, E♭';
+          break;
+          case "E":
+          notesInScaleA='<span class="rootNote">E,</span>F, G, A, B, C, D, E';
+          notesInScaleB="";
+          break;
+          case "F":
+          notesInScaleA='<span class="rootNote">F,</span> F#, G#, A#, C, C#, D#, F';
+          notesInScaleB="";
+          break;
+          case "F♯G♭":
+          notesInScaleA='<span class="rootNote">F♯,</span> G, A, B, C#, D, E, F#';
+          notesInScaleB='<span class="rootNote">G♭,</span> A♭♭, B♭♭, C♭, D♭, E♭♭, F♭, G♭';
+          break;
+          case "G":
+          notesInScaleA='<span class="rootNote">G,</span> G#, A#, C, D, D#, F, G';
+          notesInScaleB="";
+          break;
+          case "G♯A♭":
+          notesInScaleA='<span class="rootNote">G♯,</span> A, B, C#, D#, E, F#, G#';
+          notesInScaleB='<span class="rootNote">A♭,</span> B♭♭, C♭,  D♭, E♭, F♭,  G♭, A♭';
+          break;
+          case "A":
+          notesInScaleA='<span class="rootNote">A,</span> Bb, C, D, E, F, G, A';
+          notesInScaleB="";
+          break;
+          case "A♯B♭":
+          notesInScaleA='<span class="rootNote">A♯,</span>  B, C#, D#, F, F#, G#, A#';
+          notesInScaleB='<span class="rootNote">B♭</span> C  D  E♭ F  G A  B♭';
+          break;
+          case "B":
+          notesInScaleA='<span class="rootNote">B♭,</span> C♭, D♭, E♭, F, G♭, A♭, B♭';
+          notesInScaleB="";
+          break;
+        default: "";
+        break;
+
+      }
+      document.getElementById("phrygianNotesA").innerHTML = notesInScaleA;
+      document.getElementById("phrygianNotesB").innerHTML = notesInScaleB;
+    audioPlayer.load();
+  }
+  </script>
+
+  <title>Modal scales</title>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="#">Ionian</a>
+    <a href="dorian.html">Dorian</a>
+    <a class="active" href="#">Phrygian</a>
+    <a href="#">Lydian</a>
+    <a href="#">Mixolydian</a>
+    <a href="#">Aeolian</a>
+    <a href="#">Locrian</a>
+    <a class="rightAlign" href="#">Contact us</a>
+
+  </div>
+  <h1 class="banner">Phrygian</h1>
+  <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
+  </p>
+</p>
+<div class="selector">
+
+    <select id="keySelect" onchange="keySelectFunction(this.value)">
+    <option value="" disabled selected>Please select a key</option>
+    <option value="C">C</option>
+    <option value="C♯D♭">C♯/D♭</option>
+    <option value="D">D</option>
+    <option value="D♯E♭">D♯/E♭</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="F♯G♭">F♯/G♭</option>
+    <option value="G">G</option>
+    <option value="G♯A♭">G♯/A♭</option>
+    <option value="A">A</option>
+    <option value="A♯B♭">A♯/B♭</option>
+    <option value="B">B</option>
+  </select>
+
+
+  <audio id="myAudioPlayer" controls>
+    <source id="myMp3Source" src="" type="audio/mpeg">
+    <source id="myOggSource" src="" type="audio/ogg">
+      Your browswer does not support the audio element.
+
+  </audio>
+</div>
+<div class="notes">
+  <p id="phrygianNotesA">
+  </p>
+  <p id="phrygianNotesB">
+  </p>
+</div>
+</body>
+</html>
