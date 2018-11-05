@@ -13,7 +13,7 @@
   function keySelectFunction(key){
     var cassetteImageAnimated=document.getElementById("cassetteImage");
     var date = new Date();
-    cassetteImageAnimated.src="images/cassette300.svg";
+    cassetteImageAnimated.src="Images/cassette300.svg";
 
     var mp3Audio=document.getElementById('myMp3Source');
     var oggAudio=document.getElementById('myOggSource');
@@ -81,7 +81,7 @@
     audioPlayer.addEventListener("play", function () {
         var cassetteImageAnimated=document.getElementById("cassetteImage");
         var date = new Date();
-        cassetteImageAnimated.src="images/cassette300Animate.svg?"+date.getTime();
+        cassetteImageAnimated.src="Images/cassette300Animate.svg?"+date.getTime();
 });
   audioPlayer.addEventListener("ended", function () {
     var cassetteImageAnimated=document.getElementById("cassetteImage");
