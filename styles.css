@@ -127,7 +127,7 @@ position: relative;
   -webkit-appearance: none; /* hide default arrow in chrome OSX */
   -moz-appearance: none;  /* hide default arrow in firefox */
 }
-.customDropdown::before, 
+.customDropdown::before,
 .customDropdown::after {
   content: "";
   position: absolute;
@@ -169,7 +169,7 @@ font-family: 'Roboto', sans-serif;
 font-size: 26px;
 text-align: left;
 float:left;
-width: 450px;
+width: 500px;
 position: relative;
 
 

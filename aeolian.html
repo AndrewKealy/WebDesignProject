@@ -13,66 +13,66 @@
   function keySelectFunction(key){
     var mp3Audio=document.getElementById('myMp3Source');
     var oggAudio=document.getElementById('myOggSource');
-    mp3Audio.src='MusicSamples/Phrygian/'+key+'_Phrygian.mp3';
-    oggAudio.src='MusicSamples/Phrygian/'+key+'_Phrygian.ogg';
+    mp3Audio.src='MusicSamples/Aeolian/'+key+'_aeolian.mp3';
+    oggAudio.src='MusicSamples/Aeolian/'+key+'_aeolian.ogg';
     var audioPlayer=document.getElementById('myAudioPlayer');
     var notesInScaleA="";
     var notesInScaleB="";
       switch(key){
         case "C":
-          notesInScaleA='<span class="rootNote">C,</span> D♭, E♭, F, G, Ab, Bb, C';
+          notesInScaleA='<span class="rootNote">C,</span> D, E♭, F, G, A♭, B♭, C';
           notesInScaleB="";
           break;
           case "C♯D♭":
-          notesInScaleA='<span class="rootNote">C#,</span> D, E, F#, G#, A, B, C#';
-          notesInScaleB='<span class="rootNote">D♭,</span> E♭♭, F♭, G♭, A♭, B♭♭, C♭, D♭';
+          notesInScaleA='<span class="rootNote">C♯,</span> D♯, E, F♯, G♯, A, B, C♯';
+          notesInScaleB='<span class="rootNote">D♭,</span> E♭, F♭, G♭, A♭, B♭♭, C♭, D♭';
           break;
           case "D":
-          notesInScaleA='<span class="rootNote">D,</span> E♭, F, G, A, B♭, C, D';
+          notesInScaleA='<span class="rootNote">D,</span> E, F, G, A, B♭, C, D';
           notesInScaleB="";
           break;
           case "D♯E♭":
-          notesInScaleA='<span class="rootNote">D♯,</span> E, F#, G#, A#, B, C#, D#';
-          notesInScaleB='<span class="rootNote">E♭,</span> F♭, G♭, A♭, B♭, C♭, D♭, E♭';
+          notesInScaleA='<span class="rootNote">D♯,</span> E♯, F♯, G♯, A♯, B, C♯, D♯';
+          notesInScaleB='<span class="rootNote">E♭,</span> F, G♭, A♭, B♭, C♭, D♭, E♭';
           break;
           case "E":
-          notesInScaleA='<span class="rootNote">E, </span>F, G, A, B, C, D, E';
+          notesInScaleA='<span class="rootNote">E,</span> F♯, G, A, B, C, D, E';
           notesInScaleB="";
           break;
           case "F":
-          notesInScaleA='<span class="rootNote">F,</span> G♭, A♭, B♭, C, D♭, E♭, F';
+          notesInScaleA='<span class="rootNote">F,</span> G, A♭, B♭, C, D♭, E♭, F';
           notesInScaleB="";
           break;
           case "F♯G♭":
-          notesInScaleA='<span class="rootNote">F♯,</span> G, A, B, C#, D, E, F#';
-          notesInScaleB='<span class="rootNote">G♭,</span> A♭♭, B♭♭, C♭, D♭, E♭♭, F♭, G♭';
+          notesInScaleA='<span class="rootNote">F♯,</span> G♯, A, B, C♯, D, E, F♯';
+          notesInScaleB='<span class="rootNote">G♭,</span> A♭, B♭♭, C♭, D♭, E♭♭, F♭, G♭';
           break;
           case "G":
-          notesInScaleA='<span class="rootNote">G,</span> A♭, B♭, C, D, E♭, F, G';
+          notesInScaleA='<span class="rootNote">G,</span> A, B♭, C, D, E♭, F, G';
           notesInScaleB="";
           break;
           case "G♯A♭":
-          notesInScaleA='<span class="rootNote">G♯,</span> A, B, C#, D#, E, F#, G#';
-          notesInScaleB='<span class="rootNote">A♭,</span> B♭♭, C♭,  D♭, E♭, F♭,  G♭, A♭';
+          notesInScaleA='<span class="rootNote">G♯,</span> A♯, B, C♯, D♯, E, F♯, G♯';
+          notesInScaleB='<span class="rootNote">A♭,</span> B♭, C♭,  D♭, E♭, F♭,  G♭,  A♭';
           break;
           case "A":
-          notesInScaleA='<span class="rootNote">A,</span> B♭, C, D, E, F, G, A';
+          notesInScaleA='<span class="rootNote">A,</span> B, C, D, E, F, G, A';
           notesInScaleB="";
           break;
           case "A♯B♭":
-          notesInScaleA='<span class="rootNote">A♯,</span>  B, C#, D#, E♯, F#, G#, A#';
-          notesInScaleB='<span class="rootNote">B♭</span> C♭, D♭, E♭, F, G♭, A♭, B♭';
+          notesInScaleA='<span class="rootNote">A♯,</span> B♯, C♯, D♯, E♯, F♯, G♯, A♯';
+          notesInScaleB='<span class="rootNote">B♭,</span> C,  D♭,  E♭, F,  G♭, A♭, B♭';
           break;
           case "B":
-          notesInScaleA='<span class="rootNote">B,</span> C, D, E, F♯, G, A, B';
+          notesInScaleA='<span class="rootNote">B,</span> C♯, D, E, F♯, G, A, B';
           notesInScaleB="";
           break;
         default: "";
         break;
 
       }
-      document.getElementById("phrygianNotesA").innerHTML = notesInScaleA;
-      document.getElementById("phrygianNotesB").innerHTML = notesInScaleB;
+      document.getElementById("aeolianNotesA").innerHTML = notesInScaleA;
+      document.getElementById("aeolianNotesB").innerHTML = notesInScaleB;
     audioPlayer.load();
     audioPlayer.addEventListener("play", function () {
         var cassetteImageAnimated=document.getElementById("cassetteImage");
@@ -100,10 +100,10 @@
     <a href="index.html">Home</a>
     <a href="ionian.html">Ionian</a>
     <a href="dorian.html">Dorian</a>
-    <a class="active" href="#">Phrygian</a>
+    <a href="phrygian.html">Phrygian</a>
     <a href="lydian.html">Lydian</a>
     <a href="mixolydian.html">Mixolydian</a>
-    <a href="aeolian.html">Aeolian</a>
+    <a class="active" href="#">Aeolian</a>
     <a href="locrian.html">Locrian</a>
     <a href="summary.html">Summary</a>
     <a class="rightAlign" href="contact.html">Contact us</a>
@@ -119,7 +119,7 @@
   </div>
 
   <div class="mainBlock">
-  <h1 class="banner">Phrygian</h1>
+  <h1 class="banner">Aeolian</h1>
   <div class="selectAndNotesRow">
   <div class="customDropdown">
   <select id="keySelect" onchange="keySelectFunction(this.value)">
@@ -139,9 +139,9 @@
 </select>
 </div>
 <div class="notes">
-  <p id="phrygianNotesA">
+  <p id="aeolianNotesA">
   </p>
-  <p id="phrygianNotesB">
+  <p id="aeolianNotesB">
   </p>
 </div>
 </div>
@@ -153,7 +153,7 @@
       Your browswer does not support the audio element.
   </audio>
   <div>
-  <button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
+	<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
 </div>
   <div id="cassette">
   <img id="cassetteImage" src="Images/cassette300.svg" alt="A cassette tape" />

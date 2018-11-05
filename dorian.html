@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
 
-  <!-- A script that sets the src of the audio player to the correct key and updartes the displayed notes depending on the value selected-->
+  <!-- A script that sets the src of the audio player to the correct key and updates the displayed notes depending on the value selected-->
 
   <script>
   function keySelectFunction(key){
@@ -64,16 +64,27 @@
           notesInScaleB='<span class="rootNote">B♭,</span> C,  D♭,  E♭, F,  G, A♭, B♭';
           break;
           case "B":
-          notesInScaleA='<span class="rootNote">B,</span> C♯, D♯, E, F♯, G♯, A♯, B';
+          notesInScaleA='<span class="rootNote">B,</span> C♯, D, E, F♯, G♯, A, B';
           notesInScaleB="";
           break;
         default: "";
         break;
 
       }
-      document.getElementById("ionianNotesA").innerHTML = notesInScaleA;
-      document.getElementById("ionianNotesB").innerHTML = notesInScaleB;
+      document.getElementById("dorianNotesA").innerHTML = notesInScaleA;
+      document.getElementById("dorianNotesB").innerHTML = notesInScaleB;
     audioPlayer.load();
+    audioPlayer.addEventListener("play", function () {
+        var cassetteImageAnimated=document.getElementById("cassetteImage");
+        var date = new Date();
+        cassetteImageAnimated.src="Images/cassette300Animate.svg?"+date.getTime();
+});
+  audioPlayer.addEventListener("ended", function () {
+    var cassetteImageAnimated=document.getElementById("cassetteImage");
+    var date = new Date();
+    cassetteImageAnimated.src="Images/cassette300.svg";
+
+  })
   }
   </script>
 
@@ -89,49 +100,68 @@
     <a href="index.html">Home</a>
     <a href="ionian.html">Ionian</a>
     <a class="active" href="#">Dorian</a>
-    <a href="Phrygian.html">Phrygian</a>
-    <a href="#">Lydian</a>
-    <a href="#">Mixolydian</a>
-    <a href="#">Aeolian</a>
-    <a href="#">Locrian</a>
-    <a class="rightAlign" href="#">Contact us</a>
+    <a href="phrygian.html">Phrygian</a>
+    <a href="lydian.html">Lydian</a>
+    <a href="mixolydian.html">Mixolydian</a>
+    <a href="aeolian.html">Aeolian</a>
+    <a href="locrian.html">Locrian</a>
+    <a href="summary.html">Summary</a>
+    <a class="rightAlign" href="contact.html">Contact us</a>
 
   </div>
+  <div class="container">
+
+
+    <div class="modeInfo">
+    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
+    </p>
+    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. </p>
+  </div>
+
+  <div class="mainBlock">
   <h1 class="banner">Dorian</h1>
-  <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
+  <div class="selectAndNotesRow">
+  <div class="customDropdown">
+  <select id="keySelect" onchange="keySelectFunction(this.value)">
+  <option value="" disabled selected>Please select a key</option>
+  <option value="C">C</option>
+  <option value="C♯D♭">C♯/D♭</option>
+  <option value="D">D</option>
+  <option value="D♯E♭">D♯/E♭</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="F♯G♭">F♯/G♭</option>
+  <option value="G">G</option>
+  <option value="G♯A♭">G♯/A♭</option>
+  <option value="A">A</option>
+  <option value="A♯B♭">A♯/B♭</option>
+  <option value="B">B</option>
+</select>
+</div>
+<div class="notes">
+  <p id="dorianNotesA">
   </p>
-</p>
-<div class="selector">
+  <p id="dorianNotesB">
+  </p>
+</div>
+</div>
 
-    <select id="keySelect" onchange="keySelectFunction(this.value)">
-    <option value="" disabled selected>Please select a key</option>
-    <option value="C">C</option>
-    <option value="C♯D♭">C♯/D♭</option>
-    <option value="D">D</option>
-    <option value="D♯E♭">D♯/E♭</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="F♯G♭">F♯/G♭</option>
-    <option value="G">G</option>
-    <option value="G♯A♭">G♯/A♭</option>
-    <option value="A">A</option>
-    <option value="A♯B♭">A♯/B♭</option>
-    <option value="B">B</option>
-  </select>
-
-
-  <audio id="myAudioPlayer" controls>
+<div id="player">
+  <audio id="myAudioPlayer" >
     <source id="myMp3Source" src="" type="audio/mpeg">
     <source id="myOggSource" src="" type="audio/ogg">
       Your browswer does not support the audio element.
-
   </audio>
+  <div>
+	<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
 </div>
-<div class="notes">
-  <p id="ionianNotesA">
-  </p>
-  <p id="ionianNotesB">
-  </p>
+  <div id="cassette">
+  <img id="cassetteImage" src="Images/cassette300.svg" alt="A cassette tape" />
+</div>
+</div>
+
+</div>
 </div>
 </body>
+
 </html>
