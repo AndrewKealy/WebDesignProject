@@ -127,7 +127,7 @@ position: relative;
   -webkit-appearance: none; /* hide default arrow in chrome OSX */
   -moz-appearance: none;  /* hide default arrow in firefox */
 }
-.customDropdown::before,
+.customDropdown::before, 
 .customDropdown::after {
   content: "";
   position: absolute;
