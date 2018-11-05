@@ -1,24 +1,17 @@
-html body{
+*{
   margin:0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.rootNote{
-  color: red;
-}
-.banner{
-  padding-top: 40px;
-font-family: 'Roboto', sansa-serif;
-font-size: 100px;
-text-align: center;
 
-}
 .topnav{
   background-color: black;
   overflow: hidden;
 }
-
 /* Style the links inside the navigation bar */
+
+
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -34,7 +27,7 @@ text-align: center;
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: #fff;
     color: black;
 }
 
@@ -47,15 +40,175 @@ text-align: center;
   float:right;
 }
 
-.bodyText{
-  margin: 0px 40px 0px 40px;
-  font-size: 18px;
+.container{
+  margin:0;
+  padding: 0;
+  background-color: lightgray;
+  width: 100%;
+  min-width: 800px;
+  height: 100vh;
+  position: absolute;
 }
 
-.notes{
+.modeInfo{
+  width: 31%;
+  min-height: 300px;
+  height: 90%;
+  float:left;
+  position: relative;
+  background-color: white;
+  border-right: 3px solid gray;
+  overflow: auto;
+  margin-top: 20px;
+}
+.bodyText{
+  font-size: 18px;
+  padding: 20px 20px 0px 20px;
+}
+.bodyText::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+  color: #0d1d38
+  margin-right: .5em;
+}
+
+.mainBlock{
+  width: 69%;
+  height: 90%;
+  float: left;
+  position: relative;
+  background: white;
+  border-radius: 5px;
+  margin-top:20px;
+}
+.banner{
   padding-top: 40px;
+  padding-left: 20px;
+font-family: 'Roboto', sans-serif;
+font-size: 100px;
+text-align: left;
+color: #0d1d38;
+height: 25%;
+min-height: 180px;
+position: relative;
+}
+
+.selectAndNotesRow{
+
+  position:relative;
+  height: 20%;
+  min-height: 200px;
+  max-width: 800px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 10px;
+  border:3px solid gray;
+}
+.customDropdown{
+  position: relative;
+  font-family:  Arial, Helvetica;
+  float:left;
+  margin: 2% 2% 2% 2%;
+  font-size: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+.customDropdown select{
+  background-color:  #00B2FF;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: none; /* hide default arrow in chrome OSX */
+  -moz-appearance: none;  /* hide default arrow in firefox */
+}
+.customDropdown::before,
+.customDropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.customDropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.customDropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+
+}
+
+
+.customDropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.customDropdown::after {
+  color: rgba(0,0,0,.4);
+}
+.notes{
+padding-top: 2%;
+margin-left: 2%;
+margin-top: 2%;
 font-family: 'Roboto', sans-serif;
 font-size: 26px;
-text-align: center;
+text-align: left;
+float:left;
+width: 450px;
+position: relative;
 
+
+}
+
+.rootNote{
+  color: #00B2FF;
+}
+
+#player{
+  min-height: 200px;
+  max-width: 800px;
+  background-color: lightgray;
+  padding:10px;
+  height:20%;
+  clear: both;
+  border-radius: 15px;
+  margin: 10px;
+  border:3px solid gray;
+}
+
+#playButton{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  float:left;
+  margin-left: 10%;
+  margin-right: 3%;
+  color:white;
+  font-size: 120px;
+  padding-left: 30px;
+  background-color: transparent;
+  border-color: #00B2FF
+  position: relative;
+}
+#playButton:focus {outline:0;}
+
+#cassetteImage{
+  height: 150px;
+    float:left;
+    position: relative;
 }

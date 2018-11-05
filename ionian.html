@@ -11,6 +11,10 @@
 
   <script>
   function keySelectFunction(key){
+    var cassetteImageAnimated=document.getElementById("cassetteImage");
+    var date = new Date();
+    cassetteImageAnimated.src="images/cassette300.svg";
+
     var mp3Audio=document.getElementById('myMp3Source');
     var oggAudio=document.getElementById('myOggSource');
     mp3Audio.src='MusicSamples/Ionian/'+key+'_Ionian.mp3';
@@ -56,7 +60,7 @@
           notesInScaleB='<span class="rootNote">A♭,</span> B♭, C, D♭, E♭, F, G, A♭';
           break;
           case "A":
-          notesInScaleA='<span class="rootNote">A,</span>B, C♯, D, E, F♯, G♯, A';
+          notesInScaleA='<span class="rootNote">A, </span>B, C♯, D, E, F♯, G♯, A';
           notesInScaleB="";
           break;
           case "A♯B♭":
@@ -74,8 +78,22 @@
       document.getElementById("ionianNotesA").innerHTML = notesInScaleA;
       document.getElementById("ionianNotesB").innerHTML = notesInScaleB;
     audioPlayer.load();
+    audioPlayer.addEventListener("play", function () {
+        var cassetteImageAnimated=document.getElementById("cassetteImage");
+        var date = new Date();
+        cassetteImageAnimated.src="images/cassette300Animate.svg?"+date.getTime();
+});
+  audioPlayer.addEventListener("ended", function () {
+    var cassetteImageAnimated=document.getElementById("cassetteImage");
+    var date = new Date();
+    cassetteImageAnimated.src="images/cassette300.svg";
+
+  })
   }
+
   </script>
+
+
 
   <title>Modal scales</title>
 
@@ -97,35 +115,34 @@
     <a class="rightAlign" href="#">Contact us</a>
 
   </div>
+  <div class="container">
+
+
+    <div class="modeInfo">
+    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
+    </p>
+    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. </p>
+  </div>
+
+  <div class="mainBlock">
   <h1 class="banner">Ionian</h1>
-  <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
-  </p>
-</p>
-<div class="selector">
-
-    <select id="keySelect" onchange="keySelectFunction(this.value)">
-    <option value="" disabled selected>Please select a key</option>
-    <option value="C">C</option>
-    <option value="C♯D♭">C♯/D♭</option>
-    <option value="D">D</option>
-    <option value="D♯E♭">D♯/E♭</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="F♯G♭">F♯/G♭</option>
-    <option value="G">G</option>
-    <option value="G♯A♭">G♯/A♭</option>
-    <option value="A">A</option>
-    <option value="A♯B♭">A♯/B♭</option>
-    <option value="B">B</option>
-  </select>
-
-
-  <audio id="myAudioPlayer" controls>
-    <source id="myMp3Source" src="" type="audio/mpeg">
-    <source id="myOggSource" src="" type="audio/ogg">
-      Your browswer does not support the audio element.
-
-  </audio>
+  <div class="selectAndNotesRow">
+  <div class="customDropdown">
+  <select id="keySelect" onchange="keySelectFunction(this.value)">
+  <option value="" disabled selected>Please select a key</option>
+  <option value="C">C</option>
+  <option value="C♯D♭">C♯/D♭</option>
+  <option value="D">D</option>
+  <option value="D♯E♭">D♯/E♭</option>
+  <option value="E">E</option>
+  <option value="F">F</option>
+  <option value="F♯G♭">F♯/G♭</option>
+  <option value="G">G</option>
+  <option value="G♯A♭">G♯/A♭</option>
+  <option value="A">A</option>
+  <option value="A♯B♭">A♯/B♭</option>
+  <option value="B">B</option>
+</select>
 </div>
 <div class="notes">
   <p id="ionianNotesA">
@@ -133,5 +150,24 @@
   <p id="ionianNotesB">
   </p>
 </div>
+</div>
+
+<div id="player">
+  <audio id="myAudioPlayer" >
+    <source id="myMp3Source" src="" type="audio/mpeg">
+    <source id="myOggSource" src="" type="audio/ogg">
+      Your browswer does not support the audio element.
+  </audio>
+  <div>
+	<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
+</div>
+  <div id="cassette">
+  <img id="cassetteImage" src="images/cassette300.svg" alt="A cassette tape" />
+</div>
+</div>
+
+</div>
+</div>
 </body>
+
 </html>
