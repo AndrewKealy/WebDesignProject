@@ -9,84 +9,7 @@
 
   <!-- A script that sets the src of the audio player to the correct key and updates the displayed notes depending on the value selected-->
 
-  <script>
-  function keySelectFunction(key){
-    var mp3Audio=document.getElementById('myMp3Source');
-    var oggAudio=document.getElementById('myOggSource');
-    mp3Audio.src='MusicSamples/Mixolydian/'+key+'_Mixolydian.mp3';
-    oggAudio.src='MusicSamples/Mixolydian/'+key+'_Mixolydian.ogg';
-    var audioPlayer=document.getElementById('myAudioPlayer');
-    var notesInScaleA="";
-    var notesInScaleB="";
-      switch(key){
-        case "C":
-          notesInScaleA='<span class="rootNote">C,</span> D, E, F, G, A, B♭, C';
-          notesInScaleB="";
-          break;
-          case "C♯D♭":
-          notesInScaleA='<span class="rootNote">C♯,</span> D♯, E♯, F♯, G♯, A♯, B, C♯';
-          notesInScaleB='<span class="rootNote">D♭,</span> E♭, F, G♭, A♭, B♭, C♭, D♭';
-          break;
-          case "D":
-          notesInScaleA='<span class="rootNote">D,</span> E, F♯, G, A, B, C, D';
-          notesInScaleB="";
-          break;
-          case "D♯E♭":
-          notesInScaleA='<span class="rootNote">D♯,</span> E♯, F𝄪, G♯, A♯, B♯, C♯, D♯';
-          notesInScaleB='<span class="rootNote">E♭,</span> F, G, A♭, B♭, C, D♭, E♭';
-          break;
-          case "E":
-          notesInScaleA='<span class="rootNote">E,</span> F♯, G♯, A, B, C♯, D, E';
-          notesInScaleB="";
-          break;
-          case "F":
-          notesInScaleA='<span class="rootNote">F,</span> G, A, B♭, C, D, E♭, F';
-          notesInScaleB="";
-          break;
-          case "F♯G♭":
-          notesInScaleA='<span class="rootNote">F♯,</span> G♯, A♯, B, C♯, D♯, E, F♯';
-          notesInScaleB='<span class="rootNote">G♭,</span> A♭, B♭, C♭, D♭, E♭, F♭, G♭';
-          break;
-          case "G":
-          notesInScaleA='<span class="rootNote">G,</span> A, B, C, D, E, F, G';
-          notesInScaleB="";
-          break;
-          case "G♯A♭":
-          notesInScaleA='<span class="rootNote">G♯,</span> A♯, B♯, C♯, D♯, E♯, F♯, G♯';
-          notesInScaleB='<span class="rootNote">A♭,</span> B♭, C,  D♭, E♭, F,  G♭,  A♭';
-          break;
-          case "A":
-          notesInScaleA='<span class="rootNote">A,</span> B, ♯, D, E, F♯, G, A';
-          notesInScaleB="";
-          break;
-          case "A♯B♭":
-          notesInScaleA='<span class="rootNote">A♯,</span> B♯, C𝄪, D♯, E♯, F𝄪, G♯, A♯';
-          notesInScaleB='<span class="rootNote">B♭,</span> C,  D,  E♭, F,  G, A♭, B♭';
-          break;
-          case "B":
-          notesInScaleA='<span class="rootNote">B,</span> C♯, D♯, E, F♯, G♯, A, B';
-          notesInScaleB="";
-          break;
-        default: "";
-        break;
-
-      }
-      document.getElementById("mixolydianNotesA").innerHTML = notesInScaleA;
-      document.getElementById("mixolydianNotesB").innerHTML = notesInScaleB;
-    audioPlayer.load();
-    audioPlayer.addEventListener("play", function () {
-        var cassetteImageAnimated=document.getElementById("cassetteImage");
-        var date = new Date();
-        cassetteImageAnimated.src="Images/cassette300Animate.svg?"+date.getTime();
-});
-  audioPlayer.addEventListener("ended", function () {
-    var cassetteImageAnimated=document.getElementById("cassetteImage");
-    var date = new Date();
-    cassetteImageAnimated.src="Images/cassette300.svg";
-
-  })
-  }
-  </script>
+  <script src="myScripts.js"></script>
 
   <title>Modal scales</title>
 
@@ -122,7 +45,7 @@
   <h1 class="banner">Mixolydian</h1>
   <div class="selectAndNotesRow">
   <div class="customDropdown">
-  <select id="keySelect" onchange="keySelectFunction(this.value)">
+  <select id="keySelect" onchange="keySelectFunction('Mixolydian', this.value)">
   <option value="" disabled selected>Please select a key</option>
   <option value="C">C</option>
   <option value="C♯D♭">C♯/D♭</option>
@@ -139,9 +62,9 @@
 </select>
 </div>
 <div class="notes">
-  <p id="mixolydianNotesA">
+  <p id="notesA">
   </p>
-  <p id="mixolydianNotesB">
+  <p id="notesB">
   </p>
 </div>
 </div>
