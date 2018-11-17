@@ -199,7 +199,8 @@ A series of dictionaries, one for each mode, containing the notes for each key
 A switch statement that takes the mode as a parameter to select the correct dictionary.
 The key is then used to set the correct notes
 */
-
+  var notesInScaleA;
+  var notesInScaleB;
   switch(mode){
     case "Ionian":
       notesInScaleA=ionianDictionary[key];
@@ -250,7 +251,7 @@ The key is then used to set the correct notes
     //A variable is created for the audioplayer on the page and the sample is loaded
     var audioPlayer=document.getElementById('myAudioPlayer');
     audioPlayer.load();
-    
+
     // An event listener is added to the player so the animation is triggerred when the sample is played
   audioPlayer.addEventListener("play", function () {
 //The static image of the cassette is repplaced with the animated version of the SVG (created in SVGgator)

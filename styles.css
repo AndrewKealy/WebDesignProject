@@ -1,109 +1,185 @@
-*{
+body{
   margin:0;
   padding: 0;
-  box-sizing: border-box;
+  font: 15px/1.5 'Roboto', Helvetica, sans-serif;
+  background-color:WhiteSmoke;
+}
+
+/*pre{
+	font-family:verdana, sans-serif;
+}*/
+
+
+.container{
+	width:80%;
+	margin:auto;
+	overflow:hidden;
+}
+
+.sub_button{
+	height:30px;
+	background:#008080;
+	border:0;
+	padding-left:15px;
+	padding-right:15px;
+	color:#ffffff;
+}
+
+.highlight{
+	color:#008080;
 }
 
 
-.topnav{
-  background-color: black;
-  overflow: hidden;
+ul{
+	margin:0;
+	padding:0;
 }
+
+header{
+  background-color: #505050;
+  color:#ffffff;
+  padding-top:20px;
+  min-height:80px;
+  border-bottom:#008080 4px solid;
+}
+
 /* Style the links inside the navigation bar */
-
-
-.topnav a {
-    float: left;
+header nav a {
+    /*float: left;*/
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 17px;
+    text-decoration:none;
+	/*text-transform:uppercase; */
+
+    font-size: 16px;
+	/*font-weight: bold;
+	text-align: center;
+	padding: 14px 16px;
     border: 10px;
-    border-color: white;
+    border-color: white;*/
+}
+
+header li{
+	float:left;
+	display:inline;
+	margin-top:10px;
+	padding:0 15px 0 15px;
+}
+
+header #home a{
+	float:left;
+	text-decoration:none;
+	color:#f2f2f2;
+	margin:0;
+	padding-right:10px;
+}
+
+header nav{
+	float:right;
+	margin-top:10px;
+	margin-left:10px;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #fff;
-    color: black;
+header a:hover{
+	/*font-size:1.1em;*/
+	font-weight:bold;
 }
 
-
-.topnav a.active {
-    background-color: #00B2FF;
-    color: white;
-}
-.topnav a.rightAlign {
-  float:right;
+header .active a{
+    color:#7dbdbd;
+	font-weight:bold;
 }
 
-.container{
-  margin:0;
-  padding: 0;
-  background-color: lightgray;
-  width: 100%;
-  min-width: 800px;
-  height: 100vh;
-  position: absolute;
+#contact_Us{
+	padding:0px;
+	background-color: #505050;
+	color:#ffffff;
 }
 
-.modeInfo{
-  width: 31%;
-  min-height: 300px;
-  height: 90%;
-  float:left;
-  position: relative;
-  background-color: white;
-  border-right: 3px solid gray;
-  overflow: auto;
-  margin-top: 20px;
-}
-.bodyText{
-  font-size: 18px;
-  padding: 20px 20px 0px 20px;
-}
-.bodyText::first-letter {
-  -webkit-initial-letter: 3;
-  initial-letter: 3;
-  color: #0d1d38
-  margin-right: .5em;
+#contact_Us h3{
+	float:left;
 }
 
-.mainBlock{
-  width: 69%;
-  height: 90%;
-  float: left;
-  position: relative;
-  background: white;
-  border-radius: 5px;
-  margin-top:20px;
+#contact_Us form{
+	float:right;
+	margin-top:15px;
 }
-.banner{
+
+#contact_Us input[type="email"]{
+	padding:4px;
+	height:20px;
+	width:150px;
+}
+
+#banner{
+	min-height:250px;
+	background:url('./Images/music_banner[2].png') no-repeat -100px;
+
+	text-align:center;
+	color:#ffffff;
+}
+
+#banner h1{
+	margin-top:40px;
+	font-size:80px;
+	margin-bottom:10px;
+}
+
+#banner p{
+	font-size:25px;
+}
+
+/*.banner{
   padding-top: 40px;
-  padding-left: 20px;
 font-family: 'Roboto', sans-serif;
-font-size: 100px;
-text-align: left;
-color: #0d1d38;
-height: 25%;
-min-height: 180px;
-position: relative;
+font-size: 50px;
+text-align: center;
+
+}*/
+
+#body_text{
+  margin: 0px 20px 0px 20px;
+  font-size: 16px;
+}
+
+#left_body_text{
+	float:left;
+	width:55%;
+	padding:20px;
+	box-sizing: border-box;
+	border-right:#008080 2px solid;
+}
+
+
+footer{
+	clear:both;
+	position:relative;
+	padding:5px;
+	margin-top:10px;
+	color:#ffffff;
+	background-color:#008080;
+	text-align:center;
+}
+
+/*---------------------------------------------*/
+
+aside{
+	float:left;
+	width:45%;
+	position:relative;
 }
 
 .selectAndNotesRow{
-
-  position:relative;
-  height: 20%;
-  min-height: 200px;
-  max-width: 800px;
+  /*position:relative;*/
+  /*height: 20%;*/
+  /*min-height: 200px;*/
+  /*max-width: 800px;*/
   box-sizing: border-box;
   border-radius: 15px;
-  margin: 10px;
-  border:3px solid gray;
+  margin-top:10px;
+  /*border:2px #008080;*/
 }
+
 .customDropdown{
   position: relative;
   font-family:  Arial, Helvetica;
@@ -114,7 +190,7 @@ position: relative;
   vertical-align: middle;
 }
 .customDropdown select{
-  background-color:  #00B2FF;
+  background-color:  #008080;
   color: #fff;
   font-size: inherit;
   padding: .5em;
@@ -166,29 +242,27 @@ padding-top: 2%;
 margin-left: 2%;
 margin-top: 2%;
 font-family: 'Roboto', sans-serif;
-font-size: 26px;
+font-size: 22px;
 text-align: left;
 float:left;
 width: 500px;
 position: relative;
-
-
 }
 
 .rootNote{
-  color: #00B2FF;
+  color: #008080;
 }
 
 #player{
-  min-height: 200px;
+  min-height: 160px;
   max-width: 800px;
   background-color: lightgray;
   padding:10px;
   height:20%;
   clear: both;
   border-radius: 15px;
-  margin: 10px;
-  border:3px solid gray;
+  margin: 230px 10px 10px 10px;
+  border:2px solid #008080;
 }
 
 #playButton{
@@ -202,7 +276,7 @@ position: relative;
   font-size: 120px;
   padding-left: 30px;
   background-color: transparent;
-  border-color: #00B2FF
+  border-color: #008080;
   position: relative;
 }
 #playButton:focus {outline:0;}

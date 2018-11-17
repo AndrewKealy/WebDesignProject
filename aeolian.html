@@ -11,7 +11,7 @@
 
   <script src="myScripts.js"></script>
 
-  <title>Modal scales</title>
+  <title>Modal scales | Aeolian</title>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,72 +19,95 @@
 
 </head>
 <body>
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="ionian.html">Ionian</a>
-    <a href="dorian.html">Dorian</a>
-    <a href="phrygian.html">Phrygian</a>
-    <a href="lydian.html">Lydian</a>
-    <a href="mixolydian.html">Mixolydian</a>
-    <a class="active" href="#">Aeolian</a>
-    <a href="locrian.html">Locrian</a>
-    <a href="summary.html">Summary</a>
-    <a class="rightAlign" href="contact.html">Contact us</a>
+  <header>
+		<div class="container">
+			<div id="home">
+				<h1><a href="index.html">Modal Scales</a></h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="ionian.html">Ionian</a></li>
+					<li><a href="dorian.html">Dorian</a></li>
+					<li><a href="phrygian.html">Phrygian</a></li>
+					<li><a href="lydian.html">Lydian</a></li>
+					<li><a href="mixolydian.html">Mixolydian</a></li>
+					<li class="active"><a href="#">Aeolian</a></li>
+					<li><a href="locrian.html">Locrian</a></li>
+					<li><a href="summary.html">Summary</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-  </div>
-  <div class="container">
+	<section id="contact_Us">
+		<div class="container">
+			<h3>For More Information Contact Us</h3>
+			<form>
+				<input type="email" placeholder="Enter your email here">
+				<button type"submit" class="sub_button">Submit</button>
+			</form>
+		</div>
+	</section>
 
+  <article id="left_body_text">
+		<div class="container">
+			<h1>Aeolian Mode (Minor scale)</h1>
+			<p class="bodyText">The <i>Aeolian Mode</i> is the 6th mode of the major scale so it starts and ends on the 6th degree of that scale. If we play the notes of the C major scale but start on A we get the following intervals:
+			<br /><span class="highlight"><b>TONE, Semitone, TONE, TONE, Semitone, TONE, TONE</b></span>.</p>
+			<p class="bodyText">This means A Aeolian is: <span class="highlight"><b>A, B, C, D, E, F, G, A</b></span>.
+			</p>
+			<p class="bodyText">The Aeolian mode can be written as 1 2 ♭3 4 5 ♭6 ♭7 and is therefore simply the natural minor scale and is the relative minor to C major.</p>
+			<p class="bodyText">A Major: <span class="highlight"><b>A, B, C♯, D, E, F♯, G♯, A</b></span><br />A Aeolian: <span class="highlight"><b>A, B, C, D, E, F, G, A</b></span></p>
+			<p class="bodyText">The Aeolian mode has a sad, contemplative feel and is very common in both modern and classical music. Examples of Aeolian song structure are ‘All Along the Watchtower’ by Bob Dylan, ‘Losing My Religion’ by R.E.M. and Jimmy Page’s solo in ‘Stairway to Heaven’.</p>
+		</div>
+	</article>
 
-    <div class="modeInfo">
-    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
-    </p>
-    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. </p>
-  </div>
+  <aside>
+				<div class="selectAndNotesRow">
+					<div class="customDropdown">
+						<select id="keySelect" onchange="keySelectFunction('Aeolian', this.value)">
+							<option value="" disabled selected>Please select a key</option>
+							<option value="C">C</option>
+							<option value="C♯D♭">C♯/D♭</option>
+							<option value="D">D</option>
+							<option value="D♯E♭">D♯/E♭</option>
+							<option value="E">E</option>
+							<option value="F">F</option>
+							<option value="F♯G♭">F♯/G♭</option>
+							<option value="G">G</option>
+							<option value="G♯A♭">G♯/A♭</option>
+							<option value="A">A</option>
+							<option value="A♯B♭">A♯/B♭</option>
+							<option value="B">B</option>
+						</select>
+					</div>
+					<div class="notes">
+						<p id="notesA"></p>
+						<p id="notesB"></p>
+					</div>
+				</div>
 
-  <div class="mainBlock">
-  <h1 class="banner">Aeolian</h1>
-  <div class="selectAndNotesRow">
-  <div class="customDropdown">
-  <select id="keySelect" onchange="keySelectFunction('Aeolian', this.value)">
-  <option value="" disabled selected>Please select a key</option>
-  <option value="C">C</option>
-  <option value="C♯D♭">C♯/D♭</option>
-  <option value="D">D</option>
-  <option value="D♯E♭">D♯/E♭</option>
-  <option value="E">E</option>
-  <option value="F">F</option>
-  <option value="F♯G♭">F♯/G♭</option>
-  <option value="G">G</option>
-  <option value="G♯A♭">G♯/A♭</option>
-  <option value="A">A</option>
-  <option value="A♯B♭">A♯/B♭</option>
-  <option value="B">B</option>
-</select>
-</div>
-<div class="notes">
-  <p id="notesA">
-  </p>
-  <p id="notesB">
-  </p>
-</div>
-</div>
+			<div id="player">
+				<audio id="myAudioPlayer" >
+					<source id="myMp3Source" src="" type="audio/mpeg">
+					<source id="myOggSource" src="" type="audio/ogg">
+					Your browswer does not support the audio element.
+				</audio>
 
-<div id="player">
-  <audio id="myAudioPlayer" >
-    <source id="myMp3Source" src="" type="audio/mpeg">
-    <source id="myOggSource" src="" type="audio/ogg">
-      Your browswer does not support the audio element.
-  </audio>
-  <div>
-	<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
-</div>
-  <div id="cassette">
-  <img id="cassetteImage" src="Images/cassette300.svg" alt="A cassette tape" />
-</div>
-</div>
+				<div>
+					<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
+				</div>
 
-</div>
-</div>
+				<div id="cassette">
+					<img id="cassetteImage" src="Images/cassette300.svg" alt="A cassette tape" />
+				</div>
+			</div>
+		</aside>
+
+	<footer>
+		<p>Andrew, Ciaran &amp; Derek - Copyright &copy; 2018</p>
+	</footer>
 </body>
 
 </html>

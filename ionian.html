@@ -16,7 +16,7 @@
 
 
 
-  <title>Modal scales</title>
+  <title>Modal scales | Ionian</title>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,72 +24,93 @@
 
 </head>
 <body>
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a class="active" href="#">Ionian</a>
-    <a href="dorian.html">Dorian</a>
-    <a href="phrygian.html">Phrygian</a>
-    <a href="lydian.html">Lydian</a>
-    <a href="mixolydian.html">Mixolydian</a>
-    <a href="aeolian.html">Aeolian</a>
-    <a href="locrian.html">Locrian</a>
-    <a href="summary.html">Summary</a>
-    <a class="rightAlign" href="contact.html">Contact us</a>
+	<header>
+		<div class="container">
+			<div id="home">
+				<h1><a href="index.html">Modal Scales</a></h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li class="active"><a href="#">Ionian</a></li>
+					<li><a href="dorian.html">Dorian</a></li>
+					<li><a href="phrygian.html">Phrygian</a></li>
+					<li><a href="lydian.html">Lydian</a></li>
+					<li><a href="mixolydian.html">Mixolydian</a></li>
+					<li><a href="aeolian.html">Aeolian</a></li>
+					<li><a href="locrian.html">Locrian</a></li>
+					<li><a href="summary.html">Summary</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-  </div>
-  <div class="container">
+	<section id="contact_Us">
+		<div class="container">
+			<h3>For More Information Contact Us</h3>
+			<form>
+				<input type="email" placeholder="Enter your email here">
+				<button type"submit" class="sub_button">Submit</button>
+			</form>
+		</div>
+	</section>
 
+	<article id="left_body_text">
+		<div class="container">
+			<h1>Ionian Mode (Major scale)</h1>
+			<p class="bodyText">Whether you know it or not, if you play any music at all, you are familiar with the <i>Ionian Mode</i> - it is just another name for the Major scale. So, for example, the D Major scale contains the exact same notes and intervals as the <i>D Ionian Mode</i>, the E Major scale contains the same notes as the <i>E Ionian Mode</i> and so on.</p>
+			<p class="bodyText">The intervals or distances between each note are as follows:<br /><span class="highlight"><b>TONE, TONE, Semitone,TONE, TONE, TONE, Semitone.</b></span></p>
+			<p class="bodyText">Therefore C Ionian is: <span class="highlight"><b>C, D, E, F, G, A, B, C</b></span>.
+			</p>
+			<p class="bodyText">The Ionian mode has a happy character, think 'Twinkle Twinkle Little Star'. Ionian melodies work over song with the ubiquitous I - IV - V chord progression. Some examples of Ionian mode in classical and modern music are 'Ode To Joy' by Beethoven, 'Let It Be' by The Beatles and 'Brown-Eyed Girl' by Van Morrison.</p>
+		</div>
+	</article>
 
-    <div class="modeInfo">
-    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. Integer purus sem, dictum eget orci a, faucibus ultricies lectus. Vestibulum tincidunt a ligula ultricies congue. Pellentesque nec pulvinar sem. Sed nec ex sed felis tristique facilisis. Duis mauris massa, facilisis ut erat eget, faucibus porttitor dui. Integer at metus sollicitudin risus auctor tincidunt id sed dolor.
-    </p>
-    <p class="bodyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum erat non dignissim tempus. Maecenas gravida elit massa, in dictum orci efficitur vel. Nulla sem arcu, maximus imperdiet molestie sit amet, dapibus ut metus. Donec quis efficitur metus. Sed dapibus facilisis arcu ac congue. Sed sollicitudin efficitur leo at blandit. </p>
-  </div>
+		<aside>
+				<div class="selectAndNotesRow">
+					<div class="customDropdown">
+						<select id="keySelect" onchange="keySelectFunction('Ionian', this.value)">
+							<option value="" disabled selected>Please select a key</option>
+							<option value="C">C</option>
+							<option value="C♯D♭">C♯/D♭</option>
+							<option value="D">D</option>
+							<option value="D♯E♭">D♯/E♭</option>
+							<option value="E">E</option>
+							<option value="F">F</option>
+							<option value="F♯G♭">F♯/G♭</option>
+							<option value="G">G</option>
+							<option value="G♯A♭">G♯/A♭</option>
+							<option value="A">A</option>
+							<option value="A♯B♭">A♯/B♭</option>
+							<option value="B">B</option>
+						</select>
+					</div>
+					<div class="notes">
+						<p id="notesA"></p>
+						<p id="notesB"></p>
+					</div>
+				</div>
 
-  <div class="mainBlock">
-  <h1 class="banner">Ionian</h1>
-  <div class="selectAndNotesRow">
-  <div class="customDropdown">
-  <select id="keySelect" onchange="keySelectFunction('Ionian', this.value)">
-  <option value="" disabled selected>Please select a key</option>
-  <option value="C">C</option>
-  <option value="C♯D♭">C♯/D♭</option>
-  <option value="D">D</option>
-  <option value="D♯E♭">D♯/E♭</option>
-  <option value="E">E</option>
-  <option value="F">F</option>
-  <option value="F♯G♭">F♯/G♭</option>
-  <option value="G">G</option>
-  <option value="G♯A♭">G♯/A♭</option>
-  <option value="A">A</option>
-  <option value="A♯B♭">A♯/B♭</option>
-  <option value="B">B</option>
-</select>
-</div>
-<div class="notes">
-  <p id="notesA">
-  </p>
-  <p id="notesB">
-  </p>
-</div>
-</div>
-<!-- The audio source for the player is blank. The appropriate source is loaded via a JavaScript function when a key is selected. -->
-<div id="player">
-  <audio id="myAudioPlayer" >
-    <source id="myMp3Source" src="" type="audio/mpeg">
-    <source id="myOggSource" src="" type="audio/ogg">
-      Your browswer does not support the audio element.
-  </audio>
-  <div>
-	<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
-</div>
-  <div id="cassette">
-  <img id="cassetteImage" src="Images/cassette300.svg" alt="A cassette tape" />
-</div>
-</div>
+			<div id="player">
+				<audio id="myAudioPlayer" >
+					<source id="myMp3Source" src="" type="audio/mpeg">
+					<source id="myOggSource" src="" type="audio/ogg">
+					Your browswer does not support the audio element.
+				</audio>
 
-</div>
-</div>
+				<div>
+					<button id="playButton" onclick="document.getElementById('myAudioPlayer').play()">&#9658;</button>
+				</div>
+
+				<div id="cassette">
+					<img id="cassetteImage" src="Images/cassette300.svg" alt="A cassette tape" />
+				</div>
+			</div>
+		</aside>
+
+	<footer>
+		<p>Andrew, Ciaran &amp; Derek - Copyright &copy; 2018</p>
+	</footer>
+
 </body>
-
 </html>
