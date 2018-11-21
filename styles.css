@@ -116,7 +116,7 @@ header .active a{
 	color:#ffffff;
 }
 
-#banner h1{
+#banner h2{
 	margin-top:40px;
 	font-size:80px;
 	margin-bottom:10px;
@@ -292,7 +292,7 @@ position: relative;
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 700px){
-   .topnav li:not(:first-child) {display: none;}
+   .topnav li  {display: none;}
 
     .topnav a.icon {
       display: inline;
