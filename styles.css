@@ -9,7 +9,6 @@ body{
 	font-family:verdana, sans-serif;
 }*/
 
-
 .container{
 	width:80%;
 	margin:auto;
@@ -45,17 +44,11 @@ header{
 
 /* Style the links inside the navigation bar */
 header nav a {
-    /*float: left;*/
+
     color: #f2f2f2;
     text-decoration:none;
-	/*text-transform:uppercase; */
-
     font-size: 16px;
-	/*font-weight: bold;
-	text-align: center;
-	padding: 14px 16px;
-    border: 10px;
-    border-color: white;*/
+
 }
 
 header li{
@@ -79,6 +72,10 @@ header nav{
 	margin-left:10px;
 }
 
+/*hides 'burger' icon on larger screens */
+header nav .icon {
+  display:none;
+}
 /* Change the color of links on hover */
 header a:hover{
 	/*font-size:1.1em;*/
@@ -129,14 +126,6 @@ header .active a{
 	font-size:25px;
 }
 
-/*.banner{
-  padding-top: 40px;
-font-family: 'Roboto', sans-serif;
-font-size: 50px;
-text-align: center;
-
-}*/
-
 #body_text{
   margin: 0px 20px 0px 20px;
   font-size: 16px;
@@ -165,7 +154,7 @@ footer{
 
 aside{
 	float:left;
-	width:45%;
+  width:45%;
 	position:relative;
 }
 
@@ -255,7 +244,8 @@ position: relative;
 
 #player{
   min-height: 160px;
-  max-width: 800px;
+  max-width: 500px;
+  min-width: 450px;
   background-color: lightgray;
   padding:10px;
   height:20%;
@@ -284,5 +274,43 @@ position: relative;
 #cassetteImage{
   height: 150px;
     float:left;
-    position: relative;
+    position: absolute;
+}
+
+
+/* for a laptop  and tablet style displays - 950px */
+@media screen and (max-width: 1050px){
+  aside{
+    float:none;
+    width: 100%
+  }
+  #left_body_text{
+    width: 100%
+  }
+
+}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px){
+   .topnav li:not(:first-child) {display: none;}
+
+    .topnav a.icon {
+      display: inline;
+      float:left;
+      margin-top:10px;
+      padding:0 15px 0 15px;
+    }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li{
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
 }

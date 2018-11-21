@@ -4,10 +4,13 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="styles.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
 
-  <!-- A script that sets the src of the audio player to the correct key and updates the displayed notes depending on the value selected-->
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <script src="myScripts.js"></script>
 
@@ -25,7 +28,7 @@
 			<div id="home">
 				<h1><a href="index.html">Modal Scales</a></h1>
 			</div>
-			<nav>
+			<nav class="topnav" id="myTopnav">
 				<ul>
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="ionian.html">Ionian</a></li>
@@ -36,6 +39,9 @@
 					<li><a href="aeolian.html">Aeolian</a></li>
 					<li><a href="locrian.html">Locrian</a></li>
 					<li><a href="summary.html">Summary</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">
+    <i class="fa fa-bars"></i>
+  </a>
 				</ul>
 			</nav>
 		</div>

@@ -7,6 +7,10 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="myScripts.js"></script>
 
 	<title>Modal scales | Summary</title>
 
@@ -21,7 +25,7 @@
 			<div id="home">
 				<h1><a href="index.html">Modal Scales</a></h1>
 			</div>
-			<nav>
+			<nav class="topnav" id="myTopnav">
 				<ul>
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="ionian.html">Ionian</a></li>
@@ -32,6 +36,9 @@
 					<li><a href="aeolian.html">Aeolian</a></li>
 					<li><a href="locrian.html">Locrian</a></li>
 					<li class="active"><a href="#">Summary</a></li>
+					<a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">
+    <i class="fa fa-bars"></i>
+  </a>
 				</ul>
 			</nav>
 		</div>
@@ -54,7 +61,7 @@
 	</section>
 
 	<article id="body_text">
-		<div class=container">
+		<div class="container">
 			<p><h3>Summary</h3></p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis enim eu sapien sodales tincidunt vitae ac elit. Suspendisse malesuada eros eu erat pretium, eu luctus lectus aliquet. Curabitur finibus turpis vitae euismod mollis. Suspendisse pulvinar dignissim neque nec luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tincidunt sollicitudin augue sit amet fermentum. Nam consectetur metus sit amet nunc facilisis elementum. Vestibulum ultrices, ipsum ullamcorper sagittis aliquam, libero leo accumsan urna, maximus rutrum velit ex ut magna. Fusce et posuere mauris. Cras dignissim ex justo, eget pellentesque felis porta quis. Etiam ut nunc dui. Donec fringilla blandit condimentum. Quisque volutpat iaculis sem, eget tincidunt nulla lobortis non. Cras sollicitudin purus non bibendum pulvinar. Cras vitae hendrerit lectus.
 			</p>
