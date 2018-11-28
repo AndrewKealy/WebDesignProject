@@ -7,12 +7,8 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
-	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="myScripts.js"></script>
-
-	<title>Modal scales | Summary</title>
+	<title>Modal Scales | Welcome</title>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,43 +26,81 @@
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="ionian.html">Ionian</a></li>
 					<li><a href="dorian.html">Dorian</a></li>
-					<li><a href="phrygian">Phrygian</a></li>
+					<li><a href="phrygian.html">Phrygian</a></li>
 					<li><a href="lydian.html">Lydian</a></li>
 					<li><a href="mixolydian.html">Mixolydian</a></li>
 					<li><a href="aeolian.html">Aeolian</a></li>
 					<li><a href="locrian.html">Locrian</a></li>
 					<li><a href="summary.html">Summary</a></li>
-          <li class="active"><a href="#">Contact Us</a></li>
+					<li class="active"><a href="#">Contact us</a></li>
 				</ul>
 				<a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">
 	<i class="fa fa-bars"></i>
 </a>
 			</nav>
 		</div>
+		<div id="breaker">
+		</div>
 	</header>
 
-	<section id="contact_Us">
-		<div class="container">
-			<h3>For More Information Contact Us</h3>
-			<form>
-				<input type="email" placeholder="Enter your email here">
-				<button type="submit" class="sub_button">Submit</button>
-			</form>
-		</div>
-	</section>
 
-<section id="banner">
-		<div class="container">
-			<h2>Summary</h2>
+
+
+
+
+	<h2 class="contact-banner" >Contact Us</h2>
+
+		<h3 class="sub-banner">We would love to hear from you</h3>
+
+
+		<form  action="thankyou.html" method="POST">
+
+			<div id="contactform">
+
+
+				<p class="q1">
+					<label></label>
+					<input class="formquestions" type="text" name="fname" placeholder="First Name*" />
+				</p>
+
+
+
+				<p class="q2">
+					<label></label>
+					<input class="formquestions" type="text" name="lname" placeholder="Last Name*" />
+				</p>
+
+
+
+				<p class="q3">
+					<label ></label>
+					<input class="formquestions" type="email" name="emailf" placeholder="Email*" />
+				</p>
+
+
+
+				<p class="q4">
+					<label></label>
+					<textarea class="formquestions" name="message"  placeholder="Message*" rows="4" cols="50"></textarea>
+				</p>
+
+
 			</div>
-	</section>
 
-	<article id="body_text">
-		<div class="container">
-			<p><h3>Summary</h3></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis enim eu sapien sodales tincidunt vitae ac elit. Suspendisse malesuada eros eu erat pretium, eu luctus lectus aliquet. Curabitur finibus turpis vitae euismod mollis. Suspendisse pulvinar dignissim neque nec luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tincidunt sollicitudin augue sit amet fermentum. Nam consectetur metus sit amet nunc facilisis elementum. Vestibulum ultrices, ipsum ullamcorper sagittis aliquam, libero leo accumsan urna, maximus rutrum velit ex ut magna. Fusce et posuere mauris. Cras dignissim ex justo, eget pellentesque felis porta quis. Etiam ut nunc dui. Donec fringilla blandit condimentum. Quisque volutpat iaculis sem, eget tincidunt nulla lobortis non. Cras sollicitudin purus non bibendum pulvinar. Cras vitae hendrerit lectus.
-			</p>
-		</div>
-	</article>
+			<p></p>
+			<div class="buttonHolder">
+				<input class="contact-button" class="buttons" type="reset"  placeholder="reset"/>
+				<input class="contact-button" class="buttons" type="submit"  value="Submit"/>
+			</div>
+
+
+
+
+		</form>
+
+	<footer>
+		<p>Andrew, Ciaran &amp; Derek - Copyright &copy; 2018</p>
+	</footer>
+
 </body>
 </html>

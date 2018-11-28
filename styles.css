@@ -15,6 +15,7 @@ body{
 	overflow:hidden;
 }
 
+/*
 .sub_button{
 	height:30px;
 	background:#008080;
@@ -23,7 +24,7 @@ body{
 	padding-right:15px;
 	color:#ffffff;
 }
-
+*/
 .highlight{
 	color:#008080;
 }
@@ -39,7 +40,6 @@ header{
   color:#ffffff;
   padding-top:20px;
   min-height:80px;
-  border-bottom:#008080 4px solid;
 }
 
 /* Style the links inside the navigation bar */
@@ -85,6 +85,12 @@ header a:hover{
 header .active a{
     color:#7dbdbd;
 	font-weight:bold;
+}
+
+#breaker {
+  height: 20px;
+  background-color: #505050;
+  border-top:#008080 4px solid;
 }
 
 #contact_Us{
@@ -234,7 +240,7 @@ font-family: 'Roboto', sans-serif;
 font-size: 22px;
 text-align: left;
 float:left;
-width: 500px;
+min-width: 300px;
 position: relative;
 }
 
@@ -245,7 +251,7 @@ position: relative;
 #player{
   min-height: 160px;
   max-width: 500px;
-  min-width: 450px;
+  min-width: 300px;
   background-color: lightgray;
   padding:10px;
   height:20%;
@@ -278,6 +284,149 @@ position: relative;
 }
 
 
+
+/**form css**/
+
+
+/* not in use yet*/
+.formquestions4444 {
+  background-color:  #00B2FF;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  font-family:  Arial, Helvetica;
+  -webkit-appearance: none; /* hide default arrow in chrome OSX */
+  -moz-appearance: none;  /* hide default arrow in firefox */
+
+}
+
+/* not in use yet*/
+.try{
+	height: 2.6875rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 1.8px;
+    background-color: #A7B1BC;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0a0a0a;
+}
+
+
+#contactform{
+	margin: auto;
+    width: 40%;
+    border: 3px solid gray;
+    padding: 15px;
+	border-radius: 20px;
+}
+
+
+.contact-banner{
+    padding-top: 1px;
+    padding-left: 20px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: #0d1d38;
+	height: 25%;
+	min-height: 20px;
+	position: relative;
+}
+
+
+.sub-banner{
+	 text-align: center;
+	 padding-top: 1px;
+	 padding-left: 5px;
+	 font-family: 'Roboto', sans-serif;
+	 color: #0d1d38;
+	 height: 25%;
+	 min-height: 20px;
+	 position: relative;
+}
+
+.contact-image{
+  background-color: #cccccc; /* Used if the image is unavailable */
+  width:50%;
+  horizonatal-align: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  }
+
+
+.contact-button{
+    background-color: #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:3px;
+    color: #fff;
+	background-color:grey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+	text-align: center;
+	padding: 5px;
+
+}
+
+
+.contact-button:hover{
+	background-image:none;
+	background-color:#008080;
+}
+
+.q1, .q2, .q3, .q4{
+	text-align: center;
+}
+
+.formquestions{
+	height: 2.6875rem;
+	font-family: 'Roboto', sans-serif;
+	width: 80%;
+	padding: 9px 18px;
+	font-size: .98375rem;
+	color: rgba(29,32,35,8);
+	text-align: left;
+	text-transform: none;
+	vertical-align:top;
+}
+
+
+.formquestions:focus, textarea:focus {
+  border: 1px solid #008080;
+}
+
+.formquestions:focus, .formquestions:focus, .formquestions:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+
+
+.buttonHolder{
+	text-align: center;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+a {
+    color: hotpink;
+}
+
+header .active-contact a{
+    color:#fff;
+
+}
+
+
+
 /* for a laptop  and tablet style displays - 950px */
 @media screen and (max-width: 1050px){
   aside{
@@ -287,6 +436,7 @@ position: relative;
   #left_body_text{
     width: 100%
   }
+
 
 }
 
@@ -311,6 +461,15 @@ position: relative;
     float: none;
     display: block;
     text-align: left;
+  }
+  #playButton{
+    width:120px;
+    height: 120px;
+    font-size: 98px;
+  }
+  #cassetteImage{
+    height:120px;
+    width: auto;
   }
 
 }
