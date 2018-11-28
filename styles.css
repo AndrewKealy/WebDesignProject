@@ -467,6 +467,10 @@ header .active-contact a{
     display: block;
     text-align: left;
   }
+
+  #player {
+    padding: 2px;
+  }
   #playButton{
     width:120px;
     height: 120px;
@@ -478,5 +482,6 @@ header .active-contact a{
     height:120px;
     width: auto;
   }
+
 
 }
