@@ -270,13 +270,18 @@ position: relative;
   margin-right: 3%;
   color:white;
   font-size: 120px;
-  padding-left: 30px;
+
+  padding-left: 5px;
   background-color: transparent;
   border-color: #008080;
   position: relative;
 }
 #playButton:focus {outline:0;}
 
+#playButton img{
+  height: 100%;
+  width: 100%;
+}
 #cassetteImage{
   height: 150px;
     float:left;
@@ -466,6 +471,8 @@ header .active-contact a{
     width:120px;
     height: 120px;
     font-size: 98px;
+    padding-left: 5px;
+    margin-left: 2%;
   }
   #cassetteImage{
     height:120px;
