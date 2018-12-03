@@ -268,6 +268,8 @@ audioPlayer.addEventListener("ended", function () {
 })
 }
 
+//Code is taken from W3 schools Learn how to create a responsive top navigation menu with CSS and JavaScript.
+
 function responsiveNavigation() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {

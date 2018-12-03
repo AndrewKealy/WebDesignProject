@@ -432,7 +432,7 @@ header .active-contact a{
 
 
 
-/* for a laptop  and tablet style displays - 950px */
+/* for a laptop  and tablet style displays - 1050px */
 @media screen and (max-width: 1050px){
   aside{
     float:none;
@@ -445,8 +445,10 @@ header .active-contact a{
 
 }
 
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  /* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) This code is taken from  W3 schools Learn how to create a responsive top navigation menu with CSS and JavaScript. */
 @media screen and (max-width: 700px){
+
+
    .topnav li  {display: none;}
 
     .topnav a.icon {
@@ -456,8 +458,8 @@ header .active-contact a{
       padding:0 15px 0 15px;
     }
   .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
 
+  .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
