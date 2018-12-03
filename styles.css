@@ -478,8 +478,8 @@ header .active-contact a{
     margin-left: 2%;
   }
   #playButton img{
-    height: 100%;
-    width: 100%;
+    height: 120px;
+    width: auto;
   }
   #cassetteImage{
     height:120px;
