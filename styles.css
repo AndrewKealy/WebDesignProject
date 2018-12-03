@@ -5,11 +5,6 @@ body{
   background-color:WhiteSmoke;
 }
 
-/*pre{
-	font-family:verdana, sans-serif;
-}*/
-
-
 .container{
 	width:80%;
 	margin:auto;
@@ -28,7 +23,6 @@ body{
 .highlight{
 	color:#008080;
 }
-
 
 ul{
 	margin:0;
@@ -142,12 +136,11 @@ text-align: center;
   font-size: 16px;
 }
 
-#left_body_text{
+#right_body_text{
 	float:left;
 	width:55%;
 	padding:20px;
 	box-sizing: border-box;
-	border-right:#008080 2px solid;
 }
 
 
@@ -164,9 +157,11 @@ footer{
 /*---------------------------------------------*/
 
 aside{
+	box-sizing: border-box;
 	float:left;
 	width:45%;
 	position:relative;
+	/* border-right:#008080 2px solid;		maybe remove this - when viewport changes */
 }
 
 .selectAndNotesRow{
@@ -286,3 +281,87 @@ position: relative;
     float:left;
     position: relative;
 }
+
+
+/* Media Queries for resizing below 1100px or below 770px*/
+@media(max-width:1100px){
+	#player{
+	min-height:320px;
+	max-width:230px;
+	width:100%;
+	}
+	
+	#cassetteImage{
+		margin-top:20px;
+		float:none;		
+	}
+	
+	aside{
+		width:30%;
+	}
+	
+	#right_body_text{
+		width:70%;
+	}
+	
+	header li{
+		padding-right:9%;
+		margin-top:5px;
+	}
+}
+
+@media(max-width:770px){
+	
+	header nav{
+	float:left;
+	margin-top:5px;
+	margin-left:5px;
+	}
+
+	ul li{
+		padding-right:5%;
+	}
+	
+	#contact_Us h3,form, input{
+		float:none;
+		text-align:center;
+		margin:3px;
+	}
+	
+	#contact_Us form, .sub_button{
+		width:100%;
+		margin-bottom:5px;
+		margin-top:0;
+	}
+
+	#contact_Us input[type="email"]{
+		width:100%;
+		margin-bottom:5px;
+	}
+	
+	#player{
+	min-height:320px;
+	max-width:230px;
+	float:none;
+	width:100%;
+	}
+	
+	aside{
+		float:none;
+		width:80%;
+		margin-left:20%;
+	}
+	
+	#right_body_text{
+		float:none;
+		width:100%;
+	}
+	
+	#cassetteImage{
+	height: 150px;
+    float:left;
+    position: relative;
+	}
+}
+
+
