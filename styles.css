@@ -293,33 +293,6 @@ position: relative;
 /**form css**/
 
 
-/* not in use yet*/
-.formquestions4444 {
-  background-color:  #00B2FF;
-  color: #fff;
-  font-size: inherit;
-  padding: .5em;
-  padding-right: 2.5em;
-  border: 0;
-  margin: 0;
-  font-family:  Arial, Helvetica;
-  -webkit-appearance: none; /* hide default arrow in chrome OSX */
-  -moz-appearance: none;  /* hide default arrow in firefox */
-
-}
-
-/* not in use yet*/
-.try{
-	height: 2.6875rem;
-    border: 1px solid #e8e8e8;
-    border-radius: 1.8px;
-    background-color: #A7B1BC;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #0a0a0a;
-}
-
 
 #contactform{
 	margin: auto;
@@ -331,12 +304,10 @@ position: relative;
 
 
 .contact-banner{
-    padding-top: 1px;
     padding-left: 20px;
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	color: #0d1d38;
-	height: 25%;
 	min-height: 20px;
 	position: relative;
 }
@@ -353,12 +324,6 @@ position: relative;
 	 position: relative;
 }
 
-.contact-image{
-  background-color: #cccccc; /* Used if the image is unavailable */
-  width:50%;
-  horizonatal-align: center;
-  background-repeat: no-repeat; /* Do not repeat the image */
-  }
 
 
 .contact-button{
@@ -367,22 +332,22 @@ position: relative;
     -webkit-border-radius: 5px;
     border-radius:3px;
     color: #fff;
-	background-color:grey;
+	background-color:#008080;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    text-decoration: none;
     cursor: pointer;
     border:none;
-	text-align: center;
+	text-align: center; 
 	padding: 5px;
-
 }
 
-
+  
+  
 .contact-button:hover{
 	background-image:none;
-	background-color:#008080;
+	background-color:#4b9292;
 }
+
 
 .q1, .q2, .q3, .q4{
 	text-align: center;
@@ -396,8 +361,6 @@ position: relative;
 	font-size: .98375rem;
 	color: rgba(29,32,35,8);
 	text-align: left;
-	text-transform: none;
-	vertical-align:top;
 }
 
 
@@ -411,24 +374,100 @@ outline: none !important;
 }
 
 
-.buttonHolder{
+.buttonHolder{ 
 	text-align: center;
+	padding-bottom:	43px;	
 }
 
 textarea {
-    max-width:  100%;
-    max-height: 100%;
+	resize: vertical; //*keeps text box in form border*//
+}
+
+a{
+	
+	color:black;
 }
 
 
-a {
-    color: hotpink;
+.videoplayer{
+	width:620px;
+	height:320px;
+	margin-bottom: 4px;
+	border:5px outset #008080;
 }
 
-header .active-contact a{
-    color:#fff;
 
+/*table css*/
+
+table{
+	width: 80%;
+	height: 80px;
+	table-layout: fixed; 
+	margin: 0 auto; /*centers the table in div*/
 }
+
+td{
+	vertical-align: top;
+	text-align: left;
+	width: 33%;
+	padding: 10px;
+		
+}
+
+tr:hover td {
+	background-color: #008080;
+	opacity:.7;
+	transition: all 0.3s;  /* Simple transition for hover effect */
+	border: 1px solid transparent; 
+	
+	}
+
+
+.tablesummary{
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+	border-collapse: collapse;
+	border:50px;
+	cursor: pointer;
+}
+
+
+.imode{
+	font-weight: bold;	
+}
+
+
+tr {
+ 
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+  border: 1px solid transparent; /* No more visible border */
+}
+
+tr:hover {
+  background-color: #008080;
+  border: 1px solid transparent; 
+}
+
+
+.tfooter{
+	clear:both;
+	position:relative;
+	margin-top: -5px;
+	color:#ffffff;
+	background-color:#008080;
+	text-align:center;
+}
+
+	
+/* Cells in even rows (2,4,6...) are one color */        
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */        
+tr:nth-child(odd) td { background: #FEFEFE; }  
+	
 
 
 
@@ -487,6 +526,21 @@ header .active-contact a{
     height:120px;
     width: auto;
   }
+  
+  .videoplayer{
+	width:320px;
+	height:120px;
+	
+}
+
+.contact-button{
+    font-size: 12px;
+
+}
+
+table{
+	font-size: 11px;
+}
 
 
 }

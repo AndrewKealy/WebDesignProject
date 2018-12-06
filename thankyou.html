@@ -3,16 +3,38 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
 
-	<title>Modal Scales | Welcome</title>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <script src="myScripts.js"></script>
+
+
+  <title>Modal scales | Aeolian</title>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  
+  
+  <script>
+  $(document).ready(function() {
+
+    $('#example tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
+    });
+
+});
+  </script>
 
 </head>
 <body>
@@ -47,20 +69,25 @@
 
 	<section id="banner">
 		<div class="container">
-			<!--<h1 class="banner">--><h1>Thank You </h1>
-				<p>We will be in touch with you shortly regarding your query</p>
-				</br>
-
+			<!--<h1 class="banner">--><p>Thank You</p> </p>
+				<p>
+				We will be in touch with you shortly regarding your query
+				</p>
+				
+				<p>
+				In the meantime, please watch this video to learn about the transformative power of classical music
+				</p>
+				
+				<iframe class="videoplayer" width="420" 
+					src="https://www.youtube.com/embed/r9LCwI5iErE">
+				</iframe>
+				
 			</div>
 	</section>
+	
+	
 
-	<article id="body_text">
-		<div class=container">
-
-		</div>
-	</article>
-
-	<footer>
+	<footer class="tfooter">
 		<p>Andrew, Ciaran &amp; Derek - Copyright &copy; 2018</p>
 	</footer>
 </body>
