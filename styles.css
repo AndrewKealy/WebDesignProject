@@ -5,21 +5,16 @@ body{
   background-color:WhiteSmoke;
 }
 
-/*pre{
-	font-family:verdana, sans-serif;
-}*/
-
 .container{
 	width:80%;
 	margin:auto;
 	overflow:hidden;
 }
 
-
+/* for highlighting spans for emphasis */
 .highlight{
 	color:#008080;
 }
-
 
 ul{
 	margin:0;
@@ -33,13 +28,11 @@ header{
   min-height:80px;
 }
 
-/* Style the links inside the navigation bar */
+/* Styling the links inside the navigation bar */
 header nav a {
-
     color: #f2f2f2;
     text-decoration:none;
     font-size: 16px;
-
 }
 
 header li{
@@ -105,10 +98,10 @@ header .active a{
 	width:150px;
 }
 
+/* Home page photo banner */
 #banner{
 	min-height:250px;
-	background:url('./Images/music_banner[2].png') no-repeat -100px;
-
+	background:url('./Images/music_banner[2].png') no-repeat -100px;	/* Marius Masalar 410695 - Unsplash.com */
 	text-align:center;
 	color:#ffffff;
 }
@@ -128,6 +121,7 @@ header .active a{
   font-size: 16px;
 }
 
+/* container for main text - left side */
 #left_body_text{
 	float:left;
 	width:55%;
@@ -147,19 +141,23 @@ footer{
 	text-align:center;
 }
 
-/*---------------------------------------------*/
-
+/* container for right section (aside) with notes and player */
 aside{
 	float:left;
   width:45%;
 	position:relative;
 }
+/* dropdown menu to select notes */
 
 .selectAndNotesRow{
+  /*position:relative;*/
+  /*height: 20%;*/
+  /*min-height: 200px;*/
+  /*max-width: 800px;*/
   box-sizing: border-box;
   border-radius: 15px;
   margin-top:10px;
-
+  /*border:2px #008080;*/
 }
 
 .customDropdown{
@@ -211,7 +209,6 @@ aside{
 
 }
 
-
 .customDropdown::before {
   background-color: rgba(0,0,0,.15);
 }
@@ -235,6 +232,7 @@ position: relative;
   color: #008080;
 }
 
+/* media player */
 #player{
   min-height: 160px;
   max-width: 500px;
@@ -275,11 +273,7 @@ position: relative;
     position: absolute;
 }
 
-
-
-/**form css**/
-
-
+/* form */
 
 #contactform{
 	margin: auto;
@@ -289,7 +283,6 @@ position: relative;
 	border-radius: 20px;
 }
 
-
 .contact-banner{
     padding-left: 20px;
 	font-family: 'Roboto', sans-serif;
@@ -298,7 +291,6 @@ position: relative;
 	min-height: 20px;
 	position: relative;
 }
-
 
 .sub-banner{
 	 text-align: center;
@@ -310,8 +302,6 @@ position: relative;
 	 min-height: 20px;
 	 position: relative;
 }
-
-
 
 .contact-button{
     background-color: #ccc;
@@ -328,13 +318,10 @@ position: relative;
 	padding: 5px;
 }
 
-
-
 .contact-button:hover{
 	background-image:none;
 	background-color:#4b9292;
 }
-
 
 .q1, .q2, .q3, .q4{
 	text-align: center;
@@ -346,10 +333,9 @@ position: relative;
 	width: 80%;
 	padding: 9px 18px;
 	font-size: .98375rem;
-	color: rgba(29,32,35,8);
+	color: rgba(29,32,35,.8);
 	text-align: left;
 }
-
 
 .formquestions:focus, textarea:focus {
   border: 1px solid #008080;
@@ -359,7 +345,6 @@ position: relative;
 outline-offset: 0px !important;
 outline: none !important;
 }
-
 
 .buttonHolder{
 	text-align: center;
@@ -371,10 +356,8 @@ textarea {
 }
 
 a{
-
 	color:black;
 }
-
 
 .videoplayer{
 	width:620px;
@@ -383,8 +366,7 @@ a{
 	border:5px outset #008080;
 }
 
-
-/*table css*/
+/*table*/
 
 table{
 	width: 80%;
@@ -406,9 +388,7 @@ tr:hover td {
 	opacity:.7;
 	transition: all 0.3s;  /* Simple transition for hover effect */
 	border: 1px solid transparent;
-
 	}
-
 
 .tablesummary{
 	text-align:center;
@@ -418,11 +398,9 @@ tr:hover td {
 	cursor: pointer;
 }
 
-
 .imode{
 	font-weight: bold;
 }
-
 
 tr {
 
@@ -438,7 +416,6 @@ tr:hover {
   border: 1px solid transparent;
 }
 
-
 .tfooter{
 	clear:both;
 	position:relative;
@@ -448,14 +425,11 @@ tr:hover {
 	text-align:center;
 }
 
-
 /* Cells in even rows (2,4,6...) are one color */
 tr:nth-child(even) td { background: #F1F1F1; }
 
 /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
 tr:nth-child(odd) td { background: #FEFEFE; }
-
-
 
 
 /* for a laptop  and tablet style displays - 1050px */
@@ -516,7 +490,7 @@ tr:nth-child(odd) td { background: #FEFEFE; }
 
   .videoplayer{
 	width:320px;
-	height:120px;
+	height:180px;
 
 }
 
